@@ -15,15 +15,18 @@ import android.widget.TextView;
 
 import com.kc.util.Stats;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
-    public int displayX, displayY, cookies;
+    public int displayX, displayY, cookies, wait_klee=20;
     Handler handler = new Handler();
     Runnable runnable = new Runnable() {
         @Override
         public void run() {
             //hier was abläuft
-            handler.postDelayed(this,500);
+            check_kleeblatt();
+            handler.postDelayed(this,1000);
         }
     };
 
@@ -72,5 +75,22 @@ public class MainActivity extends AppCompatActivity {
         Bitmap img = BitmapFactory.decodeResource(getResources(), graphic);
         img = Bitmap.createScaledBitmap(img, displayX, displayY, true);
         return img;
+    }
+
+    private void check_kleeblatt() {
+        Random zufall = new Random();
+        boolean wait;
+        int wait_time;
+        //IMAGE VIEW
+
+        if(wait) {
+            wait_time++;
+            if(wait_time == wait_klee) {
+                wait=false;
+            } else {
+                wait=true;
+                wait_klee = zufall.nextInt(60);
+            }
+        }
     }
 }
