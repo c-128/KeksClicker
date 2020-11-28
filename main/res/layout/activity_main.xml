@@ -38,7 +38,6 @@
         tools:layout_editor_absoluteX="17dp"
         tools:layout_editor_absoluteY="16dp" />
 
-<<<<<<< HEAD
     <Button
         android:id="@+id/shop"
         android:layout_width="wrap_content"
