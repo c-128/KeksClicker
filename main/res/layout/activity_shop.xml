@@ -55,9 +55,16 @@
 
             <Button
                 android:id="@+id/buy1"
-                android:layout_width="match_parent"
+                android:layout_width="240dp"
                 android:layout_height="50dp"
-                android:text="Button" />
+                android:text="Mehr Kekse" />
+
+            <TextView
+                android:id="@+id/price1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="null"
+                android:textSize="30sp" />
         </LinearLayout>
 
     </LinearLayout>
@@ -88,9 +95,17 @@
 
             <Button
                 android:id="@+id/buy2"
-                android:layout_width="match_parent"
+                android:layout_width="240dp"
                 android:layout_height="50dp"
                 android:text="Button" />
+
+            <TextView
+                android:id="@+id/price2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="null"
+                android:textSize="30sp" />
 
         </LinearLayout>
 
@@ -122,9 +137,17 @@
 
             <Button
                 android:id="@+id/buy"
-                android:layout_width="match_parent"
+                android:layout_width="240dp"
                 android:layout_height="50dp"
                 android:text="Button" />
+
+            <TextView
+                android:id="@+id/price3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="null"
+                android:textSize="30sp" />
         </LinearLayout>
 
     </LinearLayout>

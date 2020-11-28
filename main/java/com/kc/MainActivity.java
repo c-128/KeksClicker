@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.kc.util.Stats;
+
 public class MainActivity extends AppCompatActivity {
 
     public int displayX, displayY, cookies;
@@ -32,9 +34,9 @@ public class MainActivity extends AppCompatActivity {
         cookie.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                cookies++;
+                Stats.COOKIES = Stats.COOKIES + Stats.COOKIES_PLUS;
                 updateUI();
-                ImageView image = (ImageView)findViewById(R.id.cookie);
+                ImageView image = findViewById(R.id.cookie);
                 Animation animation = AnimationUtils.loadAnimation(getApplicationContext(),
                 R.anim.animation_cookie);
                 image.startAnimation(animation);
@@ -72,15 +74,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void updateUI() {
         TextView cookiesam = findViewById(R.id.cookiesam);
-        cookiesam.setText(String.valueOf(cookies));
+        cookiesam.setText(String.valueOf(Stats.COOKIES));
     }
 
     public Bitmap create_background(int graphic) {
         Bitmap img = BitmapFactory.decodeResource(getResources(), graphic);
         img = Bitmap.createScaledBitmap(img, displayX, displayY, true);
         return img;
-
-
-
     }
 }

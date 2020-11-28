@@ -13,11 +13,19 @@ public class ShopActivity extends AppCompatActivity {
         setContentView(R.layout.activity_shop);
 
         Button back = findViewById(R.id.back_to_main);
+        Button more_cookies = findViewById(R.id.buy1);
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 setContentView(R.layout.activity_main);
+            }
+        });
+
+        more_cookies.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
     }
