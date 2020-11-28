@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -17,6 +18,14 @@ import com.kc.util.Stats;
 public class MainActivity extends AppCompatActivity {
 
     public int displayX, displayY, cookies;
+    Handler handler = new Handler();
+    Runnable runnable = new Runnable() {
+        @Override
+        public void run() {
+            //hier was abläuft
+            handler.postDelayed(this,500);
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         background.setImageBitmap(create_background(R.drawable.back));
 
         Button shop = findViewById(R.id.shop);
+        handler.post(runnable);
 
         cookie.setOnClickListener(new View.OnClickListener() {
             @Override
