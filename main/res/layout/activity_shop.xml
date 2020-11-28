@@ -31,7 +31,7 @@
         app:layout_constraintVertical_bias="0.029999971" />
 
     <LinearLayout
-        android:id="@+id/product"
+        android:id="@+id/product1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -48,13 +48,13 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/icon"
+                android:id="@+id/icon1"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 app:srcCompat="@drawable/shop_wellholz" />
 
             <Button
-                android:id="@+id/buy"
+                android:id="@+id/buy1"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:text="Button" />
@@ -63,7 +63,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/product"
+        android:id="@+id/product2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="75dp"
@@ -81,13 +81,13 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/icon"
+                android:id="@+id/icon2"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 app:srcCompat="@drawable/shop_wellholz" />
 
             <Button
-                android:id="@+id/buy"
+                android:id="@+id/buy2"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:text="Button" />
@@ -97,7 +97,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/product"
+        android:id="@+id/product3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
