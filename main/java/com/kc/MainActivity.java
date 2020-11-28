@@ -25,7 +25,8 @@ public class MainActivity extends AppCompatActivity {
         displayY = (int) (getResources().getDisplayMetrics().heightPixels * 0.75);
 
         ImageView cookie = findViewById(R.id.cookie);
-        ImageView backgorund = findViewById(R.id.background);
+        ImageView background = findViewById(R.id.background);
+        background.setImageBitmap(create_background(R.drawable.back));
 
         Button shop = findViewById(R.id.shop);
 
@@ -48,26 +49,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        shop.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setContentView(R.layout.activity_shop);
-            }
-        });
-
-        shop.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setContentView(R.layout.activity_shop);
-            }
-        });
-
-        shop.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setContentView(R.layout.activity_shop);
-            }
-        });
     }
 
     public void updateUI() {
@@ -79,8 +60,5 @@ public class MainActivity extends AppCompatActivity {
         Bitmap img = BitmapFactory.decodeResource(getResources(), graphic);
         img = Bitmap.createScaledBitmap(img, displayX, displayY, true);
         return img;
-
-
-
     }
 }
