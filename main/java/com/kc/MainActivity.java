@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -24,11 +25,20 @@ public class MainActivity extends AppCompatActivity {
         ImageView cookie = findViewById(R.id.cookie);
         ImageView backgorund = findViewById(R.id.background);
 
+        Button shop = findViewById(R.id.shop);
+
         cookie.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 cookies++;
                 updateUI();
+            }
+        });
+
+        shop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setContentView(R.layout.activity_shop);
             }
         });
     }
