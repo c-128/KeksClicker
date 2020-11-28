@@ -6,6 +6,12 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
+<<<<<<< HEAD
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+=======
+>>>>>>> fd4227ed150b5402d1b490309c31dc66ebc3f6ed
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -24,11 +30,38 @@ public class MainActivity extends AppCompatActivity {
         ImageView cookie = findViewById(R.id.cookie);
         ImageView backgorund = findViewById(R.id.background);
 
+        Button shop = findViewById(R.id.shop);
+
         cookie.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 cookies++;
                 updateUI();
+                ImageView image = (ImageView)findViewById(R.id.cookie);
+                Animation animation = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.animation_cookie);
+                image.startAnimation(animation);
+            }
+        });
+
+        shop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setContentView(R.layout.activity_shop);
+            }
+        });
+
+        shop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setContentView(R.layout.activity_shop);
+            }
+        });
+
+        shop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setContentView(R.layout.activity_shop);
             }
         });
     }
@@ -42,5 +75,8 @@ public class MainActivity extends AppCompatActivity {
         Bitmap img = BitmapFactory.decodeResource(getResources(), graphic);
         img = Bitmap.createScaledBitmap(img, displayX, displayY, true);
         return img;
+
+
+
     }
 }
