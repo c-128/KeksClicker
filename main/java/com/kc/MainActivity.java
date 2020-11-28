@@ -19,7 +19,9 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    public int displayX, displayY, cookies, wait_klee=20;
+    public int displayX, displayY, wait_time=0, cookies, wait_klee=20;
+    private boolean wait;
+
     Handler handler = new Handler();
     Runnable runnable = new Runnable() {
         @Override
@@ -79,8 +81,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void check_kleeblatt() {
         Random zufall = new Random();
-        boolean wait;
-        int wait_time;
         //IMAGE VIEW
 
         if(wait) {
@@ -90,6 +90,8 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 wait=true;
                 wait_klee = zufall.nextInt(60);
+                wait_time=0;
+                //Image wird angezeigt!
             }
         }
     }
