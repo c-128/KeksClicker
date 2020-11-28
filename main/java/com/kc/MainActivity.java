@@ -65,7 +65,21 @@ public class MainActivity extends AppCompatActivity {
                 setContentView(R.layout.activity_shop);
             }
         });
+        ImageView kleeblatt = findViewById(R.id.kleeblatt);
+        kleeblatt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                if(kleeblatt.getVisibility()==View.INVISIBLE){
+                    kleeblatt.setVisibility(View.VISIBLE);
+                }else{
+                    kleeblatt.setVisibility(View.INVISIBLE);
+                }
+
+
+            }
+
+            });
     }
 
     public void updateUI() {

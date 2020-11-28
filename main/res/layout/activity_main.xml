@@ -50,6 +50,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.976" />
-=======
+
+    <ImageView
+        android:id="@+id/kleeblatt"
+        android:layout_width="102dp"
+        android:layout_height="99dp"
+        app:srcCompat="@drawable/klee"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="133dp" />
+    =======
 >>>>>>> 8f6ba09fe5144d6cdc537120173a57b87e25430e
 </androidx.constraintlayout.widget.ConstraintLayout>
