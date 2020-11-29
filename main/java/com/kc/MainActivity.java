@@ -2,6 +2,7 @@ package com.kc;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -62,21 +63,21 @@ public class MainActivity extends AppCompatActivity {
         shop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setContentView(R.layout.activity_shop);
+                final Intent shopping = new Intent(MainActivity.this, ShopActivity.class);
+                startActivity(shopping);
             }
         });
-        ImageView kleeblatt = findViewById(R.id.kleeblatt);
+
+        final ImageView kleeblatt = findViewById(R.id.kleeblatt);
         kleeblatt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 if(kleeblatt.getVisibility()==View.INVISIBLE){
                     kleeblatt.setVisibility(View.VISIBLE);
-                }else{
+                }else {
                     kleeblatt.setVisibility(View.INVISIBLE);
                 }
-
-
             }
 
             });
